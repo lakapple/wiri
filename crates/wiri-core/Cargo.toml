@@ -1,0 +1,8 @@
+[package]
+name = "wiri-core"
+version = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+serde = { workspace = true, features = ["derive"] }
+clap = { workspace = true, features = ["derive"] }

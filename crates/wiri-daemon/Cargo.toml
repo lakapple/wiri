@@ -1,0 +1,13 @@
+[package]
+name = "wiri-daemon"
+version = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+wiri-core = { path = "../wiri-core" }
+tokio = { workspace = true, features = ["full"] }
+serde_json = { workspace = true }
+windows = { workspace = true, features = [
+    "Win32_Foundation",
+    "Win32_UI_WindowsAndMessaging",
+] }

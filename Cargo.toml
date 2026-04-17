@@ -1,6 +1,21 @@
-[package]
+[workspace.package]
 name = "wiri"
-version = "0.1.0"
 edition = "2024"
+version = "0.1.0"
 
-[dependencies]
+[workspace]
+resolver = "2"
+members = [
+    "crates/wiri-cli",
+    "crates/wiri-core",
+    "crates/wiri-daemon",
+]
+
+[workspace.dependencies]
+clap = { version = "4.6.0" }
+serde = { version = "1.0.228" }
+serde_json = { version = "1.0.149" }
+tokio = { version = "1.52.1" }
+anyhow = { version = "1.0.102" }
+thiserror = { version = "2.0.18" }
+windows = { version = "0.62.2" }

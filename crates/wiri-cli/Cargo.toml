@@ -1,0 +1,9 @@
+[package]
+name = "wiri-cli"
+version = { workspace = true }
+edition = { workspace = true }
+
+[dependencies]
+wiri-core = { path = "../wiri-core" }
+clap = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
