@@ -13,7 +13,9 @@ fn main() {
         .write(true)
         .open(pipe_name)
         .unwrap_or_else(|_| {
-            eprintln!("Failed to connect to Wiri daemon. Is it running?");
+            eprintln!(
+                "Failed to connect to Wiri daemon. Please make sure it is running in the background"
+            );
             std::process::exit(1);
         });
 
